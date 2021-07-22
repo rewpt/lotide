@@ -23,11 +23,8 @@ const assertArraysEqual = function(actual, expected) {
 const without = (arr1, arr2) => {
   //create new array to avoid mutating arr 1
   let newArr1 = [];
-  //create an object to place items from array 2 so we can avoid nested for loop
-  obj2 = {};
-
-  //Loop through items in array 2
   
+  //check if item from arr1 is in arr2, if not push to newArr1
   for (item1 of arr1) {
     if (!(arr2.includes(item1))){
       newArr1.push(item1);

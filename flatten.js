@@ -19,7 +19,20 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([3,2,4,5], [3,2,4,5]);
-assertArraysEqual([23,5,6], [33,6,25]);
+const flatten = (array) => {
+  let newArr = [];
+  for (item of array) {
+    if (Array.isArray(item) === true) {
+      for(nestedItem of item) {
+        console.log(nestedItem);
+        newArr.push(nestedItem);
+      }
+    }else {
+    newArr.push(item);
+    }
+  }
+  return newArr;
+}
 
-export default assertArraysEqual;
+let flattened = flatten([1,2,[3,4],5,[6,7]]);
+assertArraysEqual(flattened, [1,2,3,4,5,6,7])

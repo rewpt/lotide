@@ -19,5 +19,18 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([3,2,4,5], [3,2,4,5]);
-assertArraysEqual([23,5,6], [33,6,25]);
+
+const letterPositions = function(sentence){
+  const results = { };
+  for (let i = 0; i < sentence.length; i++) {
+    let curLetter = sentence[i];
+    // let objectKey = results[curLetter];
+    results[curLetter] ? results[curLetter].push(i) : results[curLetter] = [i]; 
+  }
+  return results;
+}
+letterPositions('hello');
+assertArraysEqual(letterPositions('hello').h, [0])
+assertArraysEqual(letterPositions('hello').e, [1])
+assertArraysEqual(letterPositions('hello').l, [2,3])
+assertArraysEqual(letterPositions('hello').o, [4])

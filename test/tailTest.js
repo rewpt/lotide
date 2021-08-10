@@ -1,5 +1,5 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual')
+// const assertEqual = require('../assertEqual')
 const assert = require('chai').assert;
 
 // const words = ["Yo Yo", "Lighthouse", "Labs"];
@@ -20,7 +20,7 @@ describe ("#tail", () => {
     const expected = [];
     assert.deepEqual(tail(words), expected);
   });
-  
+
   it(`returns [] when passed [1]`, () => {
     const words = [1];
     const expected = [];

@@ -1,10 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
 
 const eqArrays = (arr1, arr2) => {
   if (arr1 === arr2) { return true };
@@ -19,6 +12,4 @@ then we only need to loop through one array and check it against the second*/
   return true;
 }
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+module.exports = eqArrays;

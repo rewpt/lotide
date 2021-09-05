@@ -1,5 +1,3 @@
-
-//Determine middle of an array, 2 arr items if even length, 1 if odd and none if 2 or less items
 const middle = (arr) => {
   let finalArray = [];
   const arrLength = arr.length;
@@ -24,4 +22,3 @@ const middle = (arr) => {
 }
 
 module.exports = middle;
-

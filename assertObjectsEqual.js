@@ -9,4 +9,4 @@ const assertObjectsEqual = function(actual, expected) {
   }
 }
 
-assertObjectsEqual({dog: '55', chimp: 99}, {dog: '55', chimp: 99} );
+module.exports = assertObjectsEqual;

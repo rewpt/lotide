@@ -3,12 +3,12 @@ const eqArrays = require('./eqArrays');
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
-  // If there are not the same amount of keys the objects are not equal
+  
   if (keys1.length !== keys2.length) {
     console.log('lengths are not the same');
     return false;
   }
-  // Loop through the keys
+  
     for (let i = 0; i < keys1.length; i++) {
       if (!(keys2.includes(keys1[i]))) return false;
       if (Array.isArray(object1[keys1[i]])) {
@@ -24,17 +24,5 @@ const eqObjects = function(object1, object2) {
   return true
 };
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-console.log('ab and ba comparison: ', eqObjects(ab, ba)); // => true
 
-const abc = { a: "1", b: "2", c: "3" };
-console.log('ab and abc comparison: ', eqObjects( ab, abc)); // => false
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2)); // => false
-
+module.exports = eqObjects;

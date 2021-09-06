@@ -1,4 +1,3 @@
-
 const eqArrays = (arr1, arr2) => {
   if (arr1 === arr2) { return true };
   if (arr1 === null || arr2 === null) { return false };

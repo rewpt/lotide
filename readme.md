@@ -16,7 +16,7 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Require it:**
 
-`const _ = require('@username/lotide');`
+`const _ = require('@rewpt/lotide');`
 
 **Call it:**
 
@@ -24,11 +24,12 @@ This project was created and published by me as part of my learnings at Lighthou
 
 ## Documentation
 
-The following functions are currently implemented:
+The following are examples of some currently implemented functions:
 
 * `assertArraysEqualTest`: Checks if two arrays have same values
 * `assertEqual`: Checks if two values are equal
 * `assertObjectsEqual`: Checks if two objects have same keys and values
+* `countLetters` : Returns object of number of letters contained in string
 * `head`: Returns first value ("head") of an array
 * `middle`: Sorts array of nums then returns middle value of an array or two middle numbers if even number of values
 * `tail`: Returns all values of array except the first
